@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+
+:root{
+  --accent: #1e40af
+  --accent--light: #3b82f6
+  --muted: #6b7280
+
+}
+
+html, body, #root{
+    height: 100%
+}
+
+body{
+  background-color:  #f8fafc;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
+
+}
+
+.hero-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Add soft overlay for text contrast */
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10, 25, 47, 0.5),
+    rgba(10, 25, 47, 0.3)
+  );
+  z-index: 0;
+}
+
+/* Keep hero content visible above overlay */
+.hero-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==============================
+   Shadows & Card Effects
+================================= */
+.card-shadow {
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.08);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 12px 25px rgba(30, 64, 175, 0.12);
+}
+
+/* Consistent shadow tone */
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(30, 64, 175, 0.12);
+}
+
+/* ==============================
+   Transitions & Interactions
+================================= */
+a, button {
+  transition: all 0.25s ease;
+}
+
+/* ==============================
+   Section Tweaks
+================================= */
+#about {
+  position: relative;
+  z-index: 1;
+}
+
